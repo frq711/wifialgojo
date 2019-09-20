@@ -3,8 +3,8 @@ Bonjour my Fellow Hackers!
 You can use this tool to kick anyone from wifi network except you!
 
 How to use :
-	1. # cd wifialgojo
-	2. # bash WifiAlgojo.sh
+   1. # cd wifialgojo
+   2. # bash WifiAlgojo.sh
 - input your wifi card
 - copy and paste your ether number
 - Have Fun !!
